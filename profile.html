@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flower Shop Login</title>
+
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(to bottom right, #f8cdda, #fbd3e9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .login-box {
+    background: #fff;
+    width: 380px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    text-align: center;
+  }
+
+  .logo {
+    width: 90px;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin: 10px 0;
+    color: #c94f7c;
+  }
+
+  p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 25px;
+  }
+
+  .input-group {
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+  }
+
+  .forgot {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    font-size: 12px;
+    color: #c94f7c;
+    text-decoration: none;
+  }
+
+  .login-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #f78fb3, #f3a683);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .or {
+    margin: 20px 0;
+    font-size: 13px;
+    color: #aaa;
+  }
+
+  .social {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    background: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .google {
+    border-color: #db4437;
+    color: #db4437;
+  }
+
+  .facebook {
+    border-color: #1877f2;
+    color: #1877f2;
+  }
+
+  .signup {
+    margin-top: 15px;
+    font-size: 13px;
+  }
+
+  .signup a {
+    color: #c94f7c;
+    text-decoration: none;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="login-box">
+  <!-- LOGO IMAGE -->
+  <img src="logoflower.png" alt="Flower Shop Logo" class="logo">
+  <style>
+.logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+</style>
+
+  <h2>Flower Shop</h2>
+  <p>Welcome back! Please log in.</p>
+
+  <div class="input-group">
+    <input type="text" placeholder="Username or Email">
+  </div>
+
+  <div class="input-group">
+    <input type="password" placeholder="Password">
+    <a href="#" class="forgot">Forgot?</a>
+  </div>
+
+  <button class="login-btn">Log In</button>
+
+  <div class="or">OR</div>
+
+  <button class="social google">Log in with Google</button>
+  <button class="social facebook">Log in with Facebook</button>
+
+  <div class="signup">
+    Dont have an account? <a href="#">Sign up</a>
+  </div>
+</div>
+
+</body>
+</html>

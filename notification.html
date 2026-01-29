@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bea's Flower Shop Notifications</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .notification-container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 20px;
+    }
+
+    .notification {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 15px 10px;
+      border-bottom: 1px solid #f0f0f0;
+      position: relative;
+      
+    }
+
+    .notification.unread {
+      background: #ffe6f0;
+    }
+
+    .notification .info {
+      max-width: 80%;
+    }
+
+    .notification .info h3 {
+      margin: 0;
+      color: #d63384;
+      font-size: 16px;
+    }
+
+    .notification .info p {
+      margin: 5px 0 0 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .notification .date {
+      font-size: 12px;
+      color: #999;
+      text-align: right;
+    }
+
+    .notification .type {
+      position: absolute;
+      top: 15px;
+      right: 10px;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      background: #d63384;
+      padding: 2px 8px;
+      border-radius: 5px;
+    }
+
+    .notification button {
+      margin-top: 8px;
+      background: #d63384;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-size: 12px;
+      cursor: pointer;
+     
+    }
+
+    .notification button:hover {
+      background: #b0266a;
+    }
+
+    /* Scrollable if many notifications */
+    .notification-list {
+      max-height: 400px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="notification-container">
+    <h2>Notifications</h2>
+    <div class="notification-list">
+      <div class="notification unread">
+        <div class="info">
+          <h3>Order #1234 Confirmed</h3>
+          <p>Your order for “Rose Bouquet” has been confirmed!</p>
+          <button>View Details</button>
+        </div>
+        <div class="date"></div>
+        <div class="type">Order</div>
+      </div>
+
+      <div class="notification">
+        <div class="info">
+          <h3>Promo Alert!</h3>
+          <p>Get 20% off on all Valentines bouquets this week.</p>
+          <button>Claim Offer</button>
+        </div>
+        <div class="date"></div>
+        <div class="type">Promo</div>
+      </div>
+
+      <div class="notification unread">
+        <div class="info">
+          <h3>Delivery Update</h3>
+          <p>Your order #1230 is out for delivery!</p>
+          <button>Track Order</button>
+        </div>
+        <div class="date"></div>
+        <div class="type">Alert</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

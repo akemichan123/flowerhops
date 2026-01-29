@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bea's Flower Shop - Account Settings</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #fff0f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #d63384;
+      margin-bottom: 30px;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #f0f0f0;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      padding: 12px 20px;
+      cursor: pointer;
+      border-radius: 8px 8px 0 0;
+      background: #f8e6f0;
+      margin-right: 5px;
+     
+    }
+
+    .tab.active {
+      background: #d63384;
+      color: white;
+    }
+
+    /* Tab content */
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section h2 {
+      color: #d63384;
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin: 8px 0 5px 0;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="file"] {
+      margin-bottom: 10px;
+    }
+
+    button {
+      background: #d63384;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      
+    }
+
+    button:hover {
+      background: #b0266a;
+    }
+
+    .flex {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .checkbox-group, .radio-group {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    .checkbox-group label, .radio-group label {
+      font-weight: normal;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #f0f0f0;
+      margin: 25px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Account Settings</h1>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active" data-tab="profile">Profile</div>
+      <div class="tab" data-tab="security">Security</div>
+      <div class="tab" data-tab="privacy">Privacy</div>
+      <div class="tab" data-tab="preferences">Preferences</div>
+      <div class="tab" data-tab="notifications">Notifications</div>
+      <div class="tab" data-tab="billing">Billing</div>
+      <div class="tab" data-tab="advanced">Advanced</div>
+    </div>
+
+    <!-- Profile Tab -->
+    <div class="tab-content active" id="profile">
+      <div class="section">
+        <h2>Profile Information</h2>
+        <div class="flex">
+          <input type="text" placeholder="First Name">
+          <input type="text" placeholder="Last Name">
+        </div>
+        <input type="text" placeholder="Username">
+        <input type="email" placeholder="Email Address">
+        <label>Profile Picture</label>
+        <input type="file">
+        <textarea placeholder="Bio/Description"></textarea>
+        <input type="text" placeholder="Location">
+        <input type="text" placeholder="Website URL">
+      </div>
+
+      <div class="section">
+        <h2>Password</h2>
+        <input type="password" placeholder="Current Password">
+        <input type="password" placeholder="New Password">
+        <input type="password" placeholder="Confirm New Password">
+      </div>
+
+      <div class="section">
+        <h2>Connected Accounts</h2>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Facebook</label>
+          <label><input type="checkbox"> Twitter</label>
+          <label><input type="checkbox"> Google</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Security Tab -->
+    <div class="tab-content" id="security">
+      <div class="section">
+        <h2>Two-Factor Authentication</h2>
+        <label><input type="checkbox"> Enable 2FA</label>
+      </div>
+
+      <div class="section">
+        <h2>Login History</h2>
+        <p>Recent logins will appear here...</p>
+      </div>
+
+      <div class="section">
+        <h2>Authorized Applications</h2>
+        <p>List of apps with account access...</p>
+      </div>
+    </div>
+
+    <!-- Privacy Tab -->
+    <div class="tab-content" id="privacy">
+      <div class="section">
+        <h2>Profile Visibility</h2>
+        <div class="radio-group">
+          <label><input type="radio" name="visibility" checked> Public</label>
+          <label><input type="radio" name="visibility"> Friends Only</label>
+          <label><input type="radio" name="visibility"> Private</label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Activity Sharing</h2>
+        <label><input type="checkbox"> Allow friends to see activity</label>
+      </div>
+
+      <div class="section">
+        <h2>Data Sharing Preferences</h2>
+        <label><input type="checkbox"> Opt-in to data collection</label>
+      </div>
+
+      <div class="section">
+        <h2>Delete Account</h2>
+        <button>Delete Account</button>
+      </div>
+    </div>
+
+    <!-- Preferences Tab -->
+    <div class="tab-content" id="preferences">
+      <div class="section">
+        <h2>Appearance</h2>
+        <div class="radio-group">
+          <label><input type="radio" name="theme" checked> Light</label>
+          <label><input type="radio" name="theme"> Dark</label>
+          <label><input type="radio" name="theme"> System Default</label>
+        </div>
+        <label>Font Size</label>
+        <select>
+          <option>Small</option>
+          <option selected>Medium</option>
+          <option>Large</option>
+        </select>
+        <label>Color Scheme</label>
+        <input type="text" placeholder="Custom Color">
+      </div>
+
+      <div class="section">
+        <h2>Language & Time</h2>
+        <label>Language</label>
+        <select>
+          <option selected>English</option>
+          <option>Filipino</option>
+          <option>Spanish</option>
+        </select>
+        <label>Time Zone</label>
+        <select>
+          <option selected>GMT+8 Manila</option>
+          <option>GMT+0 London</option>
+        </select>
+        <label>Date Format</label>
+        <select>
+          <option>MM/DD/YYYY</option>
+          <option selected>DD/MM/YYYY</option>
+        </select>
+      </div>
+
+      <div class="section">
+        <h2>Accessibility</h2>
+        <label><input type="checkbox"> Keyboard Navigation</label>
+        <label><input type="checkbox"> Screen Reader Compatibility</label>
+        <label><input type="checkbox"> High Contrast Mode</label>
+      </div>
+    </div>
+
+    <!-- Notifications Tab -->
+    <div class="tab-content" id="notifications">
+      <div class="section">
+        <h2>In-App Notifications</h2>
+        <label><input type="checkbox" checked> Enable In-App Notifications</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" checked> Likes</label>
+          <label><input type="checkbox"> Comments</label>
+          <label><input type="checkbox"> Messages</label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Push Notifications</h2>
+        <label><input type="checkbox"> Enable Push Notifications</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Likes</label>
+          <label><input type="checkbox"> Comments</label>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>SMS Notifications</h2>
+        <label><input type="checkbox"> Enable SMS Notifications</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Likes</label>
+          <label><input type="checkbox"> Messages</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Billing Tab -->
+    <div class="tab-content" id="billing">
+      <div class="section">
+        <h2>Payment Method</h2>
+        <input type="text" placeholder="Credit Card / PayPal">
+        <input type="text" placeholder="Billing Address">
+      </div>
+
+      <div class="section">
+        <h2>Subscription Plan</h2>
+        <p>Current Plan: Premium</p>
+        <button>Change Plan</button>
+        <button>Cancel Plan</button>
+      </div>
+
+      <div class="section">
+        <h2>Billing History</h2>
+        <p>List of past invoices...</p>
+      </div>
+    </div>
+
+    <!-- Advanced Tab -->
+    <div class="tab-content" id="advanced">
+      <div class="section">
+        <h2>API Access</h2>
+        <p>Manage API Keys here...</p>
+      </div>
+
+      <div class="section">
+        <h2>Data Export</h2>
+        <button>Download Account Data</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        contents.forEach(c => c.classList.remove('active'));
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

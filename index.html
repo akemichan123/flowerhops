@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flower Shop</title>
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flower Shop with Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
 
-  <header>
-    <h2 class="logo">🌸 Flower</h2>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#" class="btn">Shop Now</a>
+    <nav class="sidebar-container">
+        <input type="checkbox" id="check">
+        <label for="check" class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </label>
+
+        <div class="slide">
+            <h1>Menu</h1>
+            <ul>
+                <li><a href="profile.html"><i class="far fa-user"></i> Profile</a></li>
+                <li><a href="message.html"><i class="fas fa-envelope"></i> Message</a></li>
+                <li><a href="notification.html"><i class="far fa-bell"></i> Notification</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a href="settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h1>Beautiful <span>Flowers</span><br>For Every Occasion</h1>
-    <p>Fresh and elegant flowers delivered with love and care.</p>
-    <a href="#" class="btn">Shop Flowers</a>
-  </section>
+    <header>
+        
+        <h2 class="logo">🌸 Flower</h2>
+        <nav class="desktop-nav">
+            <a href="#">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="index.html">Contact</a>
+            
+        </nav>
+    </header>
 
-  <section class="section">
-    <h2>Best Selling Flowers</h2>
+    <section class="hero">
+        <h1>Beautiful <span>Flowers</span><br>For Every Occasion</h1>
+        <p>Fresh and elegant flowers delivered with love and care.</p>
+        <a href="shop.html" class="btn">Shop Flowers</a>
+    </section>
+    
 
-    <div class="cards">
-      <div class="card">
-        <img src="boque flower.jpg" alt="Bouquet">
-        <h3>Bouquets</h3>
-      </div>
+    <section class="section">
+        <h2>Best Selling Flowers</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="boque flower.jpg" alt="Bouquet">
+                <h3>Bouquets</h3>
+            </div>
+            <div class="card">
+                <img src="rose.jpg" alt="Roses">
+                <h3>Roses</h3>
+            </div>
+            <div class="card">
+                <img src="tulip.jpg" alt="Tulips">
+                <h3>Tulips</h3>
+            </div>
+        </div>
+    </section>
 
-      <div class="card">
-        <img src="rose.jpg" alt="Roses">
-        <h3>Roses</h3>
-      </div>
-
-      <div class="card">
-        <img src="tulip.jpg" alt="Tulips">
-        <h3>Tulips</h3>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Flower Shop. All rights reserved.
-  </footer>
-
+    <footer>
+        © 2026 Bea's Flower Shop. All rights reserved.
+    </footer>
   <script src="script.js"></script>
 </body>
 </html>
